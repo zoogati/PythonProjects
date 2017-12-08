@@ -17,6 +17,11 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Project directories
+/Test Files/HTTP/*
+/Test Files/Logon/*
+/.idea/*
+
 # =========================
 # Operating System Files
 # =========================
