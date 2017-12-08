@@ -2,7 +2,7 @@ import csv
 from os import listdir
 from os.path import join, isfile
 
-comprehensive = open('comprehensiveSet.csv')
+comprehensive = open('Test Files\comprehensiveSet.csv')
 complexCSV = csv.reader(comprehensive)
 header = next(complexCSV)
 
@@ -11,9 +11,9 @@ activity = []
 
 onlynames = []
 
-mypath1 = "Scenario 1"
-mypath2 = "Scenario 2"
-mypath3 = "Scenario 3"
+mypath1 = "Test Files\Scenario 1"
+mypath2 = "Test Files\Scenario 2"
+mypath3 = "Test Files\Scenario 3"
 
 onlyfiles1 = [f for f in listdir(mypath1) if isfile(join(mypath1, f))]
 onlyfiles2 = [f for f in listdir(mypath2) if isfile(join(mypath2, f))]
@@ -102,7 +102,7 @@ def build_activities():
     activity[0].append('ExternalEmail')
     activity[0].append('Website')
     activity[0].append('WeekdayConnect')
-    activity[0].append('AfterhoursConnect')
+    activity[0].append('AfterhourConnect')
     activity[0].append('WeekendConnect')
     activity[0].append('DeviceDisconnect')
     activity[0].append('Malicious')
@@ -260,7 +260,7 @@ def build_activities():
 
 # writing an output file with all the data
 def write_csv():
-    with open("output1.csv", "wb") as f:
+    with open("Test Files\output1.csv", "wb") as f:
         print("Writing to File")
         writer = csv.writer(f)
         writer.writerows(activity)

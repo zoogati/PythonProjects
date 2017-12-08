@@ -2,16 +2,16 @@ import csv
 from os import listdir
 from os.path import join, isfile
 
-frequency = open('comprehensiveFreq.csv')
+frequency = open('Test Files\comprehensiveFreq.csv')
 frequencyCSV = csv.reader(frequency)
 header = next(frequencyCSV)
 
 allfiles = []
 onlynames = []
 
-mypath1 = "Scenario 1"
-mypath2 = "Scenario 2"
-mypath3 = "Scenario 3"
+mypath1 = "Test Files\Scenario 1"
+mypath2 = "Test Files\Scenario 2"
+mypath3 = "Test Files\Scenario 3"
 
 onlyfiles1 = [f for f in listdir(mypath1) if isfile(join(mypath1, f))]
 onlyfiles2 = [f for f in listdir(mypath2) if isfile(join(mypath2, f))]
@@ -26,7 +26,7 @@ def init_lists(data_list):
         data_list.append([])
 
 
-#Total number of activity plus one for header
+# Total number of activity plus one for header
 def init_activities(activity_list):
     for idx in range(0, 73001):
         activity_list.append([])
@@ -65,7 +65,7 @@ def build_malicious():
 
 # Retrieving the data and putting into a list
 def collect_data(data_list):
-    print 'Collecting Data'
+    print('Collecting Data')
     itr = 0
     for row in frequencyCSV:
         for idx in range(0, len(row)):
@@ -74,7 +74,7 @@ def collect_data(data_list):
 
 
 def build_activities():
-    print 'Formatting Data'
+    print('Formatting Data')
     build_malicious()
 
     index = 0
@@ -106,21 +106,23 @@ def build_activities():
         index += 1
     for weeks in range(0, 73):
         for users in range(1, len(data[weeks])):
-            string = data[weeks][users].split(',')
+            string = data[weeks][users].strip('[]').split(',')
             for char in range(len(string)):
                 activity[(1000 * weeks) + users].append(string[char])
 
-    for idx in range(1,len(activity)):
+    for idx in range(1, len(activity)):
         if activity[idx][0] in onlynames:
             activity[idx].append('1')
         else:
             activity[idx].append('0')
 
+
 def write_csv():
-    with open("output.csv", "wb") as f:
-        print "Writing to File"
+    with open("Test Files\output.csv", "wb") as f:
+        print("Writing to File")
         writer = csv.writer(f)
         writer.writerows(activity)
+
 
 init_lists(data)
 init_activities(activity)

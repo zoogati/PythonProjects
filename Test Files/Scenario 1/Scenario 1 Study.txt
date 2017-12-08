@@ -1,0 +1,26 @@
+Studying EHD0584 - Part of Scenario 1
+
+We know that the user performed the scenario 1 attack three times, once during week 40, 
+once during week 41, and another time during week 42. The attack is will look like the following:
+
+(      2	   ,	  14	     ,   12   ,	       16          ,          4       )
+Afterhour logon, device connected, website, device disconnected,  Afterhour logoff
+
+or
+
+(    3       ,       15        ,    12  ,        16          ,       4       )
+Weekend logon, device connected, website, device disconnected, Weekend logoff
+
+We also know that the user didn't previously log in afterhours and did not use removable drives.
+The user leaves shortly after the attack, so there should not be any activity a few weeks after
+the attack. Specifically, the user quits the company on week 45.
+
+Looking at the users afterhour logins, there isn't much of a pattern. On average, the user 
+logged in afterhours around 44 times a week, and during the attacks it was 50 and 46. The user,
+however, never logged in during the weekend until week 40. Also, the user never connected a
+device to the computer until week 40.
+
+Other things to notice are the weekend disconnects, afterhour disconnects, and files being
+downloaded and/or uploaded. During the attacks, different types of files are seen to be sent or 
+recieved from the internet. These activities never appeared before.
+

@@ -1,0 +1,15 @@
+Studying IJM0776 - Part of Scenario 2
+
+We can see that the user begins to browse more websites per week around week 29,
+but the user began to search for jobs during week 28 (known from keywords).
+
+After about eight weeks of job searching and sending external emails to 
+hiring company (week 32), user begins to connect and disconnect a device and
+take files. This activity follows the users typical behavior (user disconnects, 
+connects, and downloads files constantly). User will do this until they leave 
+the company.
+
+User sends a resignation email during week 34, continues to take information,
+and leaves the company during week 36.
+
+Will probably look at other users to see if there are any better features.

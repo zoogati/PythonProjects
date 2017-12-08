@@ -1,0 +1,5 @@
+System administrator becomes disgruntled. Downloads a keylogger and
+uses a thumb drive to transfer it to his supervisor's machine. The
+next day, he uses the collected keylogs to log in as his supervisor
+and send out an alarming mass email, causing panic in the
+organization. He leaves the organization immediately.

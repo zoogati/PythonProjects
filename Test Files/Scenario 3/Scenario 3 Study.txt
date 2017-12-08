@@ -1,0 +1,10 @@
+Studying CSC0217 - Part of Scenario 3
+
+User performs the attack during the last week with the company. Begins by 
+sending emails to supervisor and downloading keylogger on on device. The
+user then goes to speak to the supervisor and connects the device to the
+supervisor's computer. Sends a malicious email to all employees and quits.
+
+Previous to the attack, the user had no activity downloading executables
+or any other files. All other forms of activity are normal to the user's 
+average weekly activity.
